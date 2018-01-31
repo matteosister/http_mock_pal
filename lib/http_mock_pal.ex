@@ -15,10 +15,6 @@ defmodule HttpMockPal do
     Supervisor.start_link(children, opts)
   end
 
-  defp server_port() do
-    Application.get_env(:http_mock_pal, :port) || 4001
-  end
-
   defp configurations() do
     :http_mock_pal
     |> Application.get_env(:routers, [])
