@@ -1,14 +1,13 @@
-defmodule HttpMockPal.Router.MainTest do
+defmodule HttpMockPalTest do
   use ExUnit.Case
-  doctest HttpMockPal.Router.Main
   use Plug.Test
 
-  @main_router HttpMockPal.Router.Main
-  @opts @main_router.init([])
+  @main_router HttpMockPal.TestRouter
+  @ping_router HttpMockPal.PingRouter
 
   test "calling ping returns pong!" do
-    conn = conn(:get, "/__ping")
-    conn = @main_router.call(conn, @opts)
+    conn = conn(:get, "/ping")
+    conn = @ping_router.call(conn, [])
 
     assert conn.state == :sent
     assert conn.status == 200
@@ -17,7 +16,7 @@ defmodule HttpMockPal.Router.MainTest do
 
   test "calling ping2 returns pong2!" do
     conn = conn(:get, "/test1")
-    conn = @main_router.call(conn, @opts)
+    conn = @main_router.call(conn, [])
 
     assert conn.state == :sent
     assert conn.status == 201

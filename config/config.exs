@@ -3,8 +3,7 @@
 use Mix.Config
 
 config :http_mock_pal,
-  router: HttpMockPal.TestRouter,
-  port: 4010
+  routers: [{HttpMockPal.TestRouter, port: 4010}]
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
