@@ -1,4 +1,5 @@
 defmodule HttpMockPal.PingRouter do
+  @moduledoc false
   use Plug.Router
 
   plug :match

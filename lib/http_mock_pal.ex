@@ -1,4 +1,7 @@
 defmodule HttpMockPal do
+  @moduledoc """
+  otp entry point
+  """
   use Application
   import Enum
 

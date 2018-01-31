@@ -19,7 +19,6 @@ defmodule HttpMockPal.Mixfile do
       # This option is only needed when you don't want to use the OTP application name
       name: "http_mock_pal",
       # These are the default files included in the package
-      files: ["lib", "mix.exs", "README*"],
       maintainers: ["Matteo Giachino"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/matteosister/http_mock_pal"}
