@@ -17,7 +17,7 @@ defmodule HttpMockPal.Mixfile do
   defp package() do
     [
       # This option is only needed when you don't want to use the OTP application name
-      name: "postgrex",
+      name: "http_mock_pal",
       # These are the default files included in the package
       files: ["lib", "mix.exs", "README*"],
       maintainers: ["Matteo Giachino"],
